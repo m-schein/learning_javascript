@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Assincrionicidade</title>
+    </head>
+    <body>
+        <!-- testanto funções assincronas como a setTimeout -->
+        <script> 
+            //alert não bloqueante:
+            setTimeout(() => {
+                alert("este é um alert que não bloqueia a execução dos outros códigos!")
+            })
+
+            setTimeout(() => {
+                console.log("Imprimindo isso depois de 5 segundos!")
+            }, 5000) //5000 milisegundos == 5 segundos
+            //mesmo se não especificar o tempo, essa função irá rodar o mais cedo possível
+            console.log("imprimindo sem o setTimeout!")
+            setTimeout(() => {
+                console.log("Imprimindo assincronamente com setTimeout sem tempo especificado")
+            })
+           
+        </script>
+    </body>
+</html>
